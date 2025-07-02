@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Test Suite" thread-count="2" parallel="tests" verbose="10">
+
+	<!-- <listeners>
+		<listener class-name="com.forum.bdd.integrations.NG_listners.MobileEvent" />
+	</listeners>-->
+
+	<test name="Android native app test on Android 11">
+		<!-- <parameter name="platform" value="ios" />-->
+		<parameter name="platform" value="Android device" />
+		<!-- <parameter name="udid" value="emulator-5554" />-->
+		<parameter name="udid" value="R5CWC1SWC9M" />
+		<parameter name="systemPort" value="4723" />
+		<parameter name="deviceName" value="Mydevice" />
+		<parameter name="applicatioName" value="4um" />
+		<classes>
+			<!-- <class name="AndroidTestCases.AndroidNativeParallelTests" /> -->
+
+			<class name="com.forum.bdd.common.runner.MobileRunner" />
+
+		</classes>
+	</test>
+</suite> <!--
+Suite -->
